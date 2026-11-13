@@ -15,13 +15,13 @@ An open-standard Agent Skill (`SKILL.md`) for **Claude Code** and **OpenCode** t
 
 ### Via Skills CLI
 ```bash
-npx skills add ashrafame/security-hardening-audit
+npx skills add Ashrafame/security-hardening-audit
 ```
 
 ### Manual Installation (OpenCode & Claude Code)
 ```bash
 mkdir -p ~/.claude/skills/security-hardening-audit ~/.config/opencode/skills
-curl -fsSL https://raw.githubusercontent.com/ashrafame/security-hardening-audit/main/skills/security-hardening-audit/SKILL.md -o ~/.claude/skills/security-hardening-audit/SKILL.md
+curl -fsSL https://raw.githubusercontent.com/Ashrafame/security-hardening-audit/main/skills/security-hardening-audit/SKILL.md -o ~/.claude/skills/security-hardening-audit/SKILL.md
 ln -sfn ~/.claude/skills/security-hardening-audit ~/.config/opencode/skills/security-hardening-audit
 ```
 
