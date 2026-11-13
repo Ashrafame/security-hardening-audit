@@ -1,14 +1,15 @@
 # Security Hardening & Vulnerability Audit Skill
 
-An open-standard Agent Skill (`SKILL.md`) for **Claude Code** and **OpenCode** that performs structured security audits, vulnerability detection, and code-level hardening across web, mobile, and backend repositories.
+An open-standard Agent Skill (`SKILL.md`) for **Claude Code** and **OpenCode** that performs structured security audits, vulnerability detection, and code-level hardening across web, mobile, and real-time multiplayer repositories.
 
 ## What It Audits
 
-- **Attack Surface & Secret Exposure:** Scans for hardcoded API keys, tokens, credentials, exposed service-role keys in client bundles, and improperly ignored `.env` files.
-- **Authentication & Access Control (IDOR / BOLA):** Validates session checks, ownership filtering, and database Row-Level Security (RLS) policies.
-- **Input Validation & Injection Defense:** Checks schema validation, SQL/NoSQL/Command injection, XSS risks, and file upload sanitization.
-- **API, Webhook & Business Logic Security:** Verifies webhook cryptographic signatures, rate limiting, and atomic/idempotent operations.
-- **Transport, Headers & Dependency Hygiene:** Reviews CORS policies, TLS/cookie security flags, and vulnerable dependencies.
+- **Attack Surface & Secret Exposure:** Scans for hardcoded API keys, tokens, exposed `SUPABASE_SERVICE_ROLE_KEY` or `EXPO_PUBLIC_*` leaks, and improperly ignored `.env` files.
+- **Authentication & Access Control (IDOR / BOLA):** Validates session checks and ownership filtering across endpoints and server actions.
+- **Supabase RLS, RPCs & Edge Functions:** Audits row-level security policies, `SECURITY DEFINER` search-path safety, Storage buckets, and JWT verification.
+- +*React Native & Expo Hardening:** Checks `expo-secure-store` usage, deep link validation, native manifest permissions, and production debug flags.
+- +*Multiplayer Game Logic & Anti-Cheat:** Enforces server-authoritative state transitions, hidden-hand isolation on Realtime channels, turn sequence integrity, and safe disconnect handling.
+- **Input Validation, Webhooks & Transport Hygiene:** Verifies schema validation, Stripe webhook signatures, CORS, rate limiting, and dependency CVEs.
 
 ## Installation
 
